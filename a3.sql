@@ -36,6 +36,16 @@ CLARK
 SCOTT
 FORD
 
+
+SQL> select ename from emp where sal >=2000 and sal < = 3000;
+
+ENAME
+----------
+JONES
+BLAKE
+CLARK
+SCOTT
+FORD
 SQL> select ename from emp where sal <= 800;
 
 ENAME
@@ -159,29 +169,6 @@ SCOTT
 KING
 MILLER
 
-SQL> select ename from emp where sal >=2000 and <= 3000;
-select ename from emp where sal >=2000 and <= 3000
-                                           *
-ERROR at line 1:
-ORA-00936: missing expression
-
-
-SQL> select ename from emp where sal >=2000 and < = 3000;
-select ename from emp where sal >=2000 and < = 3000
-                                           *
-ERROR at line 1:
-ORA-00936: missing expression
-
-
-SQL> select ename from emp where sal >=2000 and sal < = 3000;
-
-ENAME
-----------
-JONES
-BLAKE
-CLARK
-SCOTT
-FORD
 
 SQL> select * from emp where deptno is not in (10,30,40);
 select * from emp where deptno is not in (10,30,40)
