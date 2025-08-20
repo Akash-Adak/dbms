@@ -97,12 +97,19 @@ MARTIN             30 CHICAGO
 WARD               30 CHICAGO
 ALLEN              30 CHICAGO
 
-SQL> select ename,dname from emp,dept where emp.deptno=dept.deptno and ename like 'A%';
+SQL> select ename,dname from emp,dept where emp.deptno=dept.deptno and ename like '%A%';
 
 ENAME      DNAME
 ---------- --------------
+CLARK      ACCOUNTING
 ADAMS      RESEARCH
+JAMES      SALES
+BLAKE      SALES
+MARTIN     SALES
+WARD       SALES
 ALLEN      SALES
+
+7 rows selected.
 
 SQL>  select ename,dname,loc from emp,dept where emp.deptno=dept.deptno and comm is not null;
 
